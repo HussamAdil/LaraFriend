@@ -1,13 +1,16 @@
 <?php
 
-namespace App\Http\Requests\Api\Auth;
+namespace App\Http\Requests\Api\Profile;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Models\User;
 use App\Traits\ResponseTrait;
-class SignUpRequest extends FormRequest
+use Illuminate\Validation\Rule;
+use Illuminate\Foundation\Http\FormRequest;
+
+class StoreRequest extends FormRequest
 {
     use ResponseTrait;
-  
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -30,6 +33,7 @@ class SignUpRequest extends FormRequest
             throw new \Illuminate\Validation\ValidationException($validator, $errorsResponse);
          } 
     }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -37,10 +41,12 @@ class SignUpRequest extends FormRequest
      */
     public function rules()
     {
+        $userId = User::where('id', Auth('api')->user()->id)->value('id');
+
         return [
-            'name' => ['required'], 
-            'email' => ['required','email','unique:users,email'], 
-            'password' => ['required','min:6','confirmed'],
+            'date_of_birth' => ['required','date'],
+            'email' => ['required', 'email', Rule::unique('users')->ignore($userId)],
+            'gender' => ['required']
         ];
     }
 }

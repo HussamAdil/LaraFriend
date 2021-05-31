@@ -1,6 +1,7 @@
 <?php
 
 return array (
+    'unauthenticated' => 'Unauthenticated',
     'get_data_success' => 'The data fetch was successful',
     'login_successfully' => 'login successfully',
     'logout_successfully'=> 'logout successfully', 

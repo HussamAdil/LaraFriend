@@ -2,11 +2,14 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
-
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use App\Traits\ResponseTrait;
 class Handler extends ExceptionHandler
 {
+    use ResponseTrait;
+
     /**
      * A list of the exception types that are not reported.
      *
@@ -38,4 +41,17 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        $trans = trans('api.unauthenticated');
+ 
+
+        return $request->expectsJson()
+                    ? $this->generalResponse(true,401,$trans,[],[])
+                    : redirect()->guest($exception->redirectTo() ?? route('login'));
+    }
+
+ 
+
 }

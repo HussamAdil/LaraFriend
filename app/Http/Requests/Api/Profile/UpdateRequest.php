@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Requests\Api\Auth;
+namespace App\Http\Requests\Api\Profile;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\Traits\ResponseTrait;
-class SignUpRequest extends FormRequest
+class UpdateRequest extends FormRequest
 {
     use ResponseTrait;
-  
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -17,7 +16,6 @@ class SignUpRequest extends FormRequest
     {
         return true;
     }
-
     protected function failedValidation(\Illuminate\Contracts\Validation\Validator $validator)
     {
       
@@ -30,6 +28,7 @@ class SignUpRequest extends FormRequest
             throw new \Illuminate\Validation\ValidationException($validator, $errorsResponse);
          } 
     }
+
     /**
      * Get the validation rules that apply to the request.
      *
@@ -38,9 +37,8 @@ class SignUpRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'], 
-            'email' => ['required','email','unique:users,email'], 
-            'password' => ['required','min:6','confirmed'],
+            'email' => 'required|email', 
+            'password' => 'required'
         ];
     }
 }

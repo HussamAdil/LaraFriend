@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Api\Profile\StoreRequest;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -14,7 +15,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return 'hello';
+        return 'hello from index';
     }
 
     /**
@@ -23,9 +24,9 @@ class ProfileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
-        //
+        return $request->all();
     }
 
     /**
@@ -36,7 +37,7 @@ class ProfileController extends Controller
      */
     public function show($id)
     {
-        //
+        return 'hello from show';
     }
 
     /**
@@ -48,7 +49,7 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return 'hello from update';
     }
 
     /**
@@ -59,6 +60,6 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return 'hello from destroy';
     }
 }

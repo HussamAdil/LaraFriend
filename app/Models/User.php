@@ -28,6 +28,9 @@ Client secret: WhoV2lldMzVgECLg0OqvnCc7COk58ylsgtOA6LJy
         'name',
         'email',
         'password',
+        'avatar',
+        'date_of_birth',
+        'gender',
     ];
 
     /**

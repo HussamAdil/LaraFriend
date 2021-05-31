@@ -19,7 +19,7 @@ use Symfony\Component\VarDumper\Caster\ResourceCaster;
 
 //auth 
 
-Route::post('/auth/signup', [AuthController::class, 'SignUp']);
+Route::post('/auth/signup', [AuthController::class, 'SignUp'])->name('api.signup');
 
 Route::post('/auth/login', [AuthController::class, 'login']);
 
@@ -27,7 +27,7 @@ Route::post('/auth/logout', [AuthController::class, 'logout']);
 
 // profile 
 
-Route::group(['middleware' => 'api'] , function()
+Route::group(['middleware' => 'auth'] , function()
 {
     Route::apiResource('profile',ProfileController::class);
 });
