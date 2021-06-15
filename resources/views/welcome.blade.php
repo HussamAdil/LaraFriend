@@ -6,99 +6,255 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+   <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
+   <!-- Vendor CSS Files -->
+   <link href="{{asset('theme/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+   <link href="{{asset('theme/assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
+   <link href="{{asset('theme/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+   <link href="{{asset('theme/assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
+   <link href="{{asset('theme/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+   <link href="{{asset('theme/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+   <link href="{{asset('theme/assets/vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+   <!-- Template Main CSS File -->
+   <link href="{{asset('theme/assets/css/style.css')}}" rel="stylesheet">
+  
+ </head>
+    <body>
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="text-center  flex text-capitalize">
-                   <h3 class="h2 d-lg-inline-block"> {{env('APP_NAME')}}  </h3>
-                </div>
-
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-              
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+          <div class="container d-flex align-items-center">
+      
+            <div class="logo mr-auto">
+              <h1 class="text-light"><a href="index.html"><span>LaraFriend</span></a></h1>
+              <!-- Uncomment below if you prefer to use an image logo -->
+              <!-- <a href="index.html"><img src="https://bootstrapmade.com/demo/templates/Appland/assets/img/hero-img.png" alt="" class="img-fluid"></a>-->
             </div>
-        </div>
-    </body>
+      
+            <nav class="nav-menu d-none d-lg-block">
+              <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#documentation">Documentation</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#team"> Who Am I ? </a></li>
+   
+              </ul>
+            </nav><!-- .nav-menu -->
+      
+          </div>
+        </header><!-- End Header -->
+      
+        <!-- ======= Hero Section ======= -->
+        <section id="hero">
+      
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+                <div data-aos="zoom-out">
+                  <h1><span>LaraFriend</span></h1>
+                  <h2>Minimal social media backend api help you to start test your front-end against a real API</h2>
+                  <div class="text-center text-lg-left">
+                    <a href="#documentation" class="btn-get-started scrollto">Get Started</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
+                <img src="https://bootstrapmade.com/demo/templates/Appland/assets/img/hero-img.png" class="img-fluid animated" alt="">
+              </div>
+            </div>
+          </div>
+      
+          <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+            <defs>
+              <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+            </defs>
+            <g class="wave1">
+              <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+            </g>
+            <g class="wave2">
+              <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+            </g>
+            <g class="wave3">
+              <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+            </g>
+          </svg>
+      
+        </section><!-- End Hero -->
+      
+        <main id="main">
+       
+      
+          <!-- ======= Documentation Section ======= -->
+          <section id="documentation" class="features">
+            <div class="container">
+      
+              <div class="section-title" data-aos="fade-up">
+                <h2>Documentation</h2>
+                <p>Check Our Documentation</p>
+              </div>
+      
+              <div class="row" data-aos="fade-left">
+                <div class="col-lg-3 col-md-4">
+                  <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
+                    <i class="ri-user-line" style="color: #19034b;"></i>
+                    <h3><a href="#signup">Signup </a></h3>
+                    
+                  </div>
+                </div>
+                 
+              </div>
+      
+            </div>
+          </section>
+            <section>
+              <div class="container">
+                <div id="signup" class="row">
+                  <div class="col-sm-7">
+                    <p>👇 <em>Create New User </em></p>
+                    <pre>
+                      
+                      <code class="language-js">
+                        fetch('http://www.larafriend.hussamadil.com/api/auth/signup', {
+                          method: 'POST',
+                          body: JSON.stringify({
+                            name: 'Hussam adil',
+                            email: 'mail@mail.com',
+                            password: 1231232,
+                            password_confirmation: 1231232,
+                          }),
+                          headers: {
+                            'Content-type': 'application/json',
+                            'Accept':'application/json'
+                          },
+                        })
+                          .then((response) => response.json())
+                          .then((json) => console.log(json));
+                    </code>
+                  </pre>   
+                  </div>
+                  <div class="col-sm-5">
+                  <p>👇 <em>Response</em></p>
+                  <pre><code class="language-js">{
+                    "status": true,
+                    "code": 201,
+                    "message": "registration successfully",
+                    "errors": [],
+                    "data": {
+                        "name": "Hussam Adil",
+                        "email": "mails@hussamadil.com",
+                        "id": 29,
+                        "access_token": "random=token_A1MDExNmE3MWJlNT"
+                     }
+                  }
+                  </code></pre>
+                </div>
+                </div>
+              
+              </div>
+            </section>
+          </section>    <!-- ======= end Documentation Section ======= -->
+      
+          <!-- ======= Pricing Section ======= -->
+          <section id="progress" class="pricing">
+            <div class="container">
+      
+              <div class="section-title" data-aos="fade-up">
+                <h2>Progress</h2>
+                <p>Check our Progress</p>
+              </div>
+      
+              <div class="row" data-aos="fade-left">
+      
+                <div class="col-lg-4 col-md-6">
+                  <div class="box" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>Done</h3>
+                     <ul>
+                      <li>Signup</li>
+                      <li>login</li>
+                    </ul>
+                  </div>
+                </div>
+   
+                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                  <div class="box" data-aos="zoom-in" data-aos-delay="400">
+                
+                    <h3>Inprogress</h3>
+                     <ul>
+                      <li>User Profile </li>
+                    </ul>
+                   
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+                    <div class="box" data-aos="zoom-in" data-aos-delay="400">
+                      <span class="advanced">Your Idea </span>
+                      <h3>Future ideas</h3>
+                     
+                      <ul>
+                        <li>share Your Idea</li>
+                
+                      </ul>
+                     
+                    </div>
+                  </div>
+      
+              </div>
+      
+            </div>
+          </section><!-- End Pricing Section -->
+                 <!-- ======= Team Section ======= -->
+                 <section id="team" class="team">
+                  <div class="container">
+            
+                    <div class="section-title" data-aos="fade-up">
+                      <h2 class="mb-4">Who Am I ?</h2>
+                       
+                    <div class="row" data-aos="fade-left">
+                      <div class="col-sm-4">
+                        <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                          <div class="pic">
+                            <img src="https://i.stack.imgur.com/zYENw.png?s=328&g=1" class="img-fluid" alt=""></div>
+                          
+                        </div>
+                      </div>
+                      <div class="col-sm-8">
+                        <div class="member-info">
+                          <h4>Hussam Adil</h4>
+                          <span> 
+                          Hello! I'm Hussam, a software developer based in Sudan 🇸🇩. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
+      
+                          My goal is to always build products that provide pixel-perfect, performant experiences. I graduated from Sudan international University.</span>
+                        </div>
+                      </div>
+                      
+                
+                    </div>
+            
+                  </div>
+                </section><!-- End Team Section -->
+        </main><!-- End #main -->
+ 
+      
+        <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+        <div id="preloader"></div>
+      
+        <!-- Vendor JS Files -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js"></script>
+        <script src="{{asset('theme/assets/vendor/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/php-email-form/validate.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/venobox/venobox.min.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/waypoints/jquery.waypoints.min.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/counterup/counterup.min.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
+        <script src="{{asset('theme/assets/vendor/aos/aos.js')}}"></script>
+      
+        <!-- Template Main JS File -->
+        <script src="{{asset('theme/assets/js/main.js')}}"></script>
+      
+      </body>
 </html>
