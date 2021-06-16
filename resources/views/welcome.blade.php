@@ -117,7 +117,7 @@
                     <pre>
                       
                       <code class="language-js">
-                        fetch('http://www.larafriend.hussamadil.com/api/auth/signup', {
+                        fetch('https://www.larafriend.hussamadil.com/api/auth/signup', {
                           method: 'POST',
                           body: JSON.stringify({
                             name: 'Hussam adil',
